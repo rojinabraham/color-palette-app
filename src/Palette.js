@@ -5,7 +5,7 @@ class Palette extends Component {
     return (
       <div className="Pallete">
         <div className="Palette-colors">{/* {color boxes} */}</div>
-        {/* {footer} */}
+        {/* {footer here} */}
       </div>
     );
   }
