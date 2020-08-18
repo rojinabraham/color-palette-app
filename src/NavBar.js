@@ -11,12 +11,12 @@ import CloseIcon from "@material-ui/icons/Close";
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { format: "hex", open: true };
+    this.state = { format: "hex", open: false };
     this.handleFormatChange = this.handleFormatChange.bind(this);
   }
   handleFormatChange(e) {
     //alert(e.target.value);
-    this.setState({ format: e.target.value }, () =>
+    this.setState({ format: e.target.value, open: true }, () =>
       this.props.handleChange(this.state.format)
     );
   }

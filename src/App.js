@@ -3,12 +3,36 @@ import seedColors from "./seedColors";
 import "./App.css";
 import Palette from "./Palette";
 import { generatePalette } from "./colorHelpers";
+import { Route, Switch } from "react-router-dom";
 
 class App extends Component {
+  findPalette = (id) => {
+    return seedColors.find(function (palette) {
+      return palette.id === id;
+    });
+  };
   render() {
     return (
       <div>
-        <Palette palette={generatePalette(seedColors[4])}></Palette>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => <h1>PaletteList Goes Here</h1>}
+          ></Route>
+          <Route
+            exact
+            path="/palette/:id"
+            render={(routeProps) => (
+              <Palette
+                palette={generatePalette(
+                  this.findPalette(routeProps.match.params.id)
+                )}
+              ></Palette>
+            )}
+          ></Route>
+        </Switch>
+        {/* generatePalette(seedColors[{findPalette()}]*/}
       </div>
     );
   }
