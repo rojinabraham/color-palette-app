@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
-import "./NavBar.css";
+import { Link } from "react-router-dom";
+import { withStyles } from "@material-ui/styles";
 import Select from "@material-ui/core/Select";
 import { MenuItem } from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import { Link } from "react-router-dom";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
+import styles from "./styles/NavBarStyles";
 
 class NavBar extends Component {
   constructor(props) {
@@ -25,17 +26,18 @@ class NavBar extends Component {
     this.setState({ open: false });
   };
   render() {
-    const { level, changeLevel, showAll } = this.props;
+    const { level, changeLevel, showAll, classes } = this.props;
     const { format } = this.state;
+    console.log(classes.selectContainer);
     return (
-      <header className="NavBar">
-        <div className="logo">
+      <header className={classes.NavBar}>
+        <div className={classes.logo}>
           <Link to="/color-palette-app/">ReactColorPicker</Link>
         </div>
         {showAll && (
-          <div className="slider-container">
+          <div>
             <span>Level: {level}</span>
-            <div className="slider">
+            <div className={classes.slider}>
               <Slider
                 defaultValue={level}
                 min={100}
@@ -47,7 +49,7 @@ class NavBar extends Component {
           </div>
         )}
 
-        <div className="select-container">
+        <div className={classes.selectContainer}>
           <Select value={format} onChange={this.handleFormatChange}>
             <MenuItem value="hex">HEX - #FFFFFF</MenuItem>
             <MenuItem value="rgb">RGB - rgba(255, 255, 255) </MenuItem>
@@ -83,4 +85,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withStyles(styles)(NavBar);
