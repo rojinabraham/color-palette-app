@@ -1,31 +1,10 @@
 import React, { Component } from "react";
 import ColorBox from "./ColorBox";
-
-import "./Palette.css";
+import styles from "./styles/PaletteStyles";
 import NavBar from "./NavBar";
 import { withStyles } from "@material-ui/styles";
-const styles = {
-  Palette: {
-    height: "100vh",
-    display: "flex",
-    flexDirection: "column",
-  },
-  colors: {
-    height: "90%",
-  },
-  PaletteFooter: {
-    backgroundColor: "white",
-    height: "5vh",
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    fontWeight: "bold",
-  },
-  emoji: {
-    fontSize: "1.5rem",
-    margin: "0 1rem",
-  },
-};
+import PaletteFooter from "./PaletteFooter";
+
 class Palette extends Component {
   constructor(props) {
     super(props);
@@ -64,10 +43,11 @@ class Palette extends Component {
           showAll
         ></NavBar>
         <div className={classes.colors}>{colorBoxes}</div>
-        <footer className="Palette-footer">
+        {/* <footer className="Palette-footer">
           {paletteName}
           <span className="emoji">{emoji}</span>
-        </footer>
+        </footer> */}
+        <PaletteFooter name={paletteName} emoji={emoji}></PaletteFooter>
       </div>
     );
   }
