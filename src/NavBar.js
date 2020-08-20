@@ -30,7 +30,7 @@ class NavBar extends Component {
     return (
       <header className="NavBar">
         <div className="logo">
-          <Link to="/">ReactColorPicker</Link>
+          <Link to="/color-palette-app/">ReactColorPicker</Link>
         </div>
         <div className="slider-container">
           <span>Level: {level}</span>
