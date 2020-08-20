@@ -22,6 +22,7 @@ class Palette extends Component {
     const { level, format } = this.state;
     const colorBoxes = colors[level].map((color) => (
       <ColorBox
+        showAll={true}
         showLink={true}
         paletteId={id}
         id={color.id}
@@ -37,6 +38,7 @@ class Palette extends Component {
           level={level}
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
+          showAll
         ></NavBar>
         <div className="Palette-colors">{colorBoxes}</div>
         <footer className="Palette-footer">
