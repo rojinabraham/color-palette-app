@@ -31,6 +31,14 @@ class App extends Component {
       JSON.stringify(this.state.palettes)
     );
   };
+  deletePalette = (id) => {
+    this.setState(
+      (st) => ({
+        palettes: st.palettes.filter((palette) => palette.id !== id),
+      }),
+      this.syncLocalStorage
+    );
+  };
   render() {
     return (
       <div>
@@ -53,7 +61,8 @@ class App extends Component {
               <PaletteList
                 {...routeProps}
                 palettes={this.state.palettes}
-              ></PaletteList>
+                deletePalette={this.deletePalette}
+              />
             )}
           ></Route>
           <Route
