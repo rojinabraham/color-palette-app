@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Button, Link } from "@material-ui/core";
-import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+// import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { withStyles } from "@material-ui/core/styles";
 import PaletteMetaForm from "./PaletteMetaForm";
 const drawerWidth = 400;
@@ -60,6 +60,9 @@ class PaletteFormNav extends Component {
   showForm = () => {
     this.setState({ formShowing: true });
   };
+  hideForm = () => {
+    this.setState({ formShowing: false });
+  };
   render() {
     const { classes, open, palettes, handleSubmit } = this.props;
     return (
@@ -107,6 +110,7 @@ class PaletteFormNav extends Component {
               <PaletteMetaForm
                 palettes={palettes}
                 handleSubmit={handleSubmit}
+                hideForm={this.hideForm}
               ></PaletteMetaForm>
             )}
           </div>
