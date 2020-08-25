@@ -29,7 +29,7 @@ export default {
     flexDirection: "column",
     flexWrap: "wrap",
     [sizes.down("xl")]: {
-      width: "80%",
+      width: "65%",
     },
     [sizes.down("xs")]: {
       width: "70%",
