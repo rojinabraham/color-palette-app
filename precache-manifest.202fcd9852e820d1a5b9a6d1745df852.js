@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0d46a1dfd2979603384f4143ba2cc359",
+    "revision": "d11756e51d8a2e50b467069227816aca",
     "url": "/color-palette-app/index.html"
   },
   {
-    "revision": "b9a0161b8fb13e8be020",
+    "revision": "2dbb5f74905521c1181e",
     "url": "/color-palette-app/static/css/2.0da342d8.chunk.css"
   },
   {
-    "revision": "08fe2d9cf0ef73064b0a",
+    "revision": "3e197b16ad874c9cf92b",
     "url": "/color-palette-app/static/css/main.6df9e3c2.chunk.css"
   },
   {
-    "revision": "b9a0161b8fb13e8be020",
-    "url": "/color-palette-app/static/js/2.9b1739c7.chunk.js"
+    "revision": "2dbb5f74905521c1181e",
+    "url": "/color-palette-app/static/js/2.fde96f0f.chunk.js"
   },
   {
     "revision": "fe2f19c5d5965d51615a596cf8d07fe9",
-    "url": "/color-palette-app/static/js/2.9b1739c7.chunk.js.LICENSE.txt"
+    "url": "/color-palette-app/static/js/2.fde96f0f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "08fe2d9cf0ef73064b0a",
-    "url": "/color-palette-app/static/js/main.61d7a56c.chunk.js"
+    "revision": "3e197b16ad874c9cf92b",
+    "url": "/color-palette-app/static/js/main.1f833eae.chunk.js"
   },
   {
     "revision": "57e2c86b757b2fc4dc5d",
